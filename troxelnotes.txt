@@ -1,0 +1,163 @@
+JSON formating!
+Exported from the editor
+{
+    "x": 2,
+    "y": 2,
+    "z": 2,
+    "voxels": [
+        [
+            [
+                {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                }
+            ],
+            null
+        ],
+        null
+    ]
+}
+With My Notes:
+
+Put the whole thing in braces
+{
+    First three entries determine canvas size, fourth is a table.
+    "x": 2, HORIZ right to left
+    "y": 2, HEIGHT bottom to top
+    "z": 2, DEPTH back to front
+    "voxels": [
+        First table seems to be depth/distance
+        starting at the back of the grid.
+        [
+            Next seems to change height order from the bottom up.
+            [
+                Lastly, the horizontal, from the right-hand side.
+                Table of colors values. There are also "a" alpha, "t" type, and some kind of "s" values I'm ignoring.
+                
+                {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                },
+                null
+            ],
+            null
+        ],
+        null
+    ]
+}
+
+Tests: It did what I wanted!
+{
+    "x": 2,
+    "y": 2,
+    "z": 2,
+    "voxels": [
+        [
+            [
+                null,
+                {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                }
+            ],
+            null
+        ],
+        [
+            null,
+            [
+                {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                },
+                null
+            ]
+        ]
+    ]
+}
+
+Write a ... pencil!
+IT FUCKING WORKS.
+{
+    "x": 3,
+    "y": 5,
+    "z": 3,
+    "voxels": [
+        [
+            null,
+            [
+                null,
+                {"r":220,"g":220,"b":180},
+                null
+            ],
+            [
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0}
+            ],
+            [
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0}
+            ],
+            [
+                {"r":255,"g":180,"b":255},
+                {"r":255,"g":180,"b":255},
+                {"r":255,"g":180,"b":255}
+            ]
+        ],
+        [
+            [
+                null,
+                {"r":0,"g":0,"b":0},
+                null
+            ],
+            [
+                {"r":220,"g":220,"b":180},
+                {"r":0,"g":0,"b":0},
+                {"r":220,"g":220,"b":180}
+            ],
+            [
+                {"r":220,"g":180,"b":0},
+                {"r":0,"g":0,"b":0},
+                {"r":220,"g":180,"b":0}
+            ],
+            [
+                {"r":220,"g":180,"b":0},
+                {"r":0,"g":0,"b":0},
+                {"r":220,"g":180,"b":0}
+            ],
+            [
+                {"r":255,"g":180,"b":255},
+                {"r":255,"g":180,"b":255},
+                {"r":255,"g":180,"b":255}
+            ]
+        ],
+        [
+            null,
+            [
+                null,
+                {"r":220,"g":220,"b":180},
+                null
+            ],
+            [
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0}
+            ],
+            [
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0},
+                {"r":220,"g":180,"b":0}
+            ],
+            [
+                {"r":255,"g":180,"b":255},
+                {"r":255,"g":180,"b":255},
+                {"r":255,"g":180,"b":255}
+            ]
+        ]
+    ]
+}
